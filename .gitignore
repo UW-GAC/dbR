@@ -19,3 +19,6 @@ vignette/*.o*
 vignette/*.xml
 *.Rout
 *.pdf
+
+# other
+.nsf.*
