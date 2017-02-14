@@ -1,11 +1,3 @@
-# vi-related files
-*~
-*.swp
-*.swo
-
-# dotenv
-.env
-
 # R-related files
 .Rproj.user
 .Rhistory
@@ -19,6 +11,3 @@ vignette/*.o*
 vignette/*.xml
 *.Rout
 *.pdf
-
-# other
-.nsf.*
