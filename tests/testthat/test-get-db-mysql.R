@@ -1,17 +1,30 @@
 context("get_db_mysql - unit tests")
 
-test_that("list_from_cnf returns a list from a .cnf file", {
+test_that("get_db_mysql returns an error if the database isn't in the .cnf
+          file", {
   #make_temp_cnf is a helper function
-  temp_cnf_path <- make_temp_cnf()
-  on.exit(unlink(temp_cnf_path)) # tidy up
-
-  expect_true(is.list(list_from_cnf(temp_cnf_path)))
-})
-
-test_that("list_from_cnf returns the expected list from a .cnf file", {
   temp_cnf_path <- make_temp_cnf()
   on.exit(unlink(temp_cnf_path))
 
-  return_expected <- as.list(c("test_connection_1", "test_connection_2"))
-  expect_identical(list_from_cnf(temp_cnf_path), return_expected)
+  expect_error(get_db_mysql("not a database", temp_cnf_path),
+               "database not in cnf file", fixed = TRUE)
+})
+
+test_that("get_db_mysql returns a MySQLConnection object", {
+  con <- get_db_mysql("readonly_test")
+  on.exit(dbDisconnect(con))
+  expect_is(con, "MySQLConnection")
+})
+
+test_that("get_db_mysql test connection can find testtable", {
+  con <- get_db_mysql("readonly_test")
+  on.exit(dbDisconnect(con))
+  expect_true("testtable" %in% dbListTables(con))
+})
+
+test_that("get_db_mysql test connection lists correct fields", {
+  con <- get_db_mysql("readonly_test")
+  on.exit(dbDisconnect(con))
+  expect_true(identical(dbListFields(con, "testtable"),
+                        c("field 1", "field 2")))
 })

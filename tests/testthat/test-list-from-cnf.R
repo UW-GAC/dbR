@@ -1,7 +1,8 @@
 context("list_from_cnf - unit tests")
 
 test_that("list_from_cnf returns an error when .cnf doesn't exist", {
-  expect_error(list_from_cnf("fake.cnf"), ".cnf file doesn't exist", fixed = TRUE)
+  expect_error(list_from_cnf("fake.cnf"),
+               ".cnf file doesn't exist", fixed = TRUE)
 })
 
 test_that("list_from_cnf returns a list from a .cnf file", {

@@ -3,9 +3,10 @@ Title: Utilities for connecting to internal UW GAC databases
 Version: 0.0.0.9000
 Authors@R: person("Ben", "Heavner", email = "bheavner@uw.edu", role = c("aut", "cre"))
 Description: Code for reading user's .env file and establishing desired database connections.
-Depends:
+Depends: 
 License: MIT
 Encoding: UTF-8
 LazyData: true
 Suggests: testthat
 RoxygenNote: 6.0.1
+Imports: RMySQL
