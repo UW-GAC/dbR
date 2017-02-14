@@ -1,3 +1,21 @@
+# vi-related files
+*~
+*.swp
+*.swo
+
+# dotenv
+.env
+
+# R-related files
 .Rproj.user
 .Rhistory
 .RData
+*.Rbuildignore
+*.Rproj
+._*
+tmp*
+*.html
+vignette/*.o*
+vignette/*.xml
+*.Rout
+*.pdf
