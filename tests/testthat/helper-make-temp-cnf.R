@@ -1,6 +1,6 @@
 # a function to make a temporary .cnf file for testing
 
-make.temp.cnf <- function(){
+make_temp_cnf <- function(){
   temp.cnf <- tempfile()
 
   contents <- "[client]
