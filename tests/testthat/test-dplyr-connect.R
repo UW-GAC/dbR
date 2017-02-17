@@ -12,19 +12,20 @@ test_that("test_dplyr_connect returns an error if the database isn't in the
 
 test_that("dplyr_connect returns a MySQLConnection object", {
   con <- dplyr_connect("readonly_test")
-  on.exit(rm(con))
-  expect_is(con, "MySQLConnection")
+  on.exit(lapply(RMySQL::dbListConnections(dbDriver( drv = "MySQL")),
+                  dbDisconnect))
+  expect_is(con, "src_mysql")
 })
 
 test_that("dplyr_connect test connection can find testtable", {
   con <- dplyr_connect ("readonly_test")
   on.exit(rm(con))
-  expect_true("testtable" %in% src_tbls(con))
+  expect_true("testtable" %in% dplyr::src_tbls(con))
 })
 
-test_that("get_db_mysql test connection lists correct fields", {
-  con <- get_db_mysql("readonly_test")
+test_that("dplyr_connect test connection lists correct fields", {
+  con <- dplyr_connect("readonly_test")
   on.exit(rm(con))
-  expect_true(identical(tbl(con, "testtable")$ops$vars,
+  expect_true(identical(dplyr::tbl(con, "testtable")$ops$vars,
                         c("field 1", "field 2")))
 })
