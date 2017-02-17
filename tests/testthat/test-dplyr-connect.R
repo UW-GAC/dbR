@@ -12,8 +12,9 @@ test_that("test_dplyr_connect returns an error if the database isn't in the
 
 test_that("dplyr_connect returns a MySQLConnection object", {
   con <- dplyr_connect("readonly_test")
-  on.exit(lapply(RMySQL::dbListConnections(dbDriver( drv = "MySQL")),
-                  dbDisconnect))
+#  on.exit(lapply(RMySQL::dbListConnections(DBI::dbDriver( drv = "MySQL")),
+#                  dbDisconnect))
+  on.exit(rm(con))
   expect_is(con, "src_mysql")
 })
 

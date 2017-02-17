@@ -12,19 +12,19 @@ test_that("get_db_mysql returns an error if the database isn't in the .cnf
 
 test_that("get_db_mysql returns a MySQLConnection object", {
   con <- get_db_mysql("readonly_test")
-  on.exit(dbDisconnect(con)) #nolint
+  on.exit(RMySQL::dbDisconnect(con)) #nolint
   expect_is(con, "MySQLConnection")
 })
 
 test_that("get_db_mysql test connection can find testtable", {
   con <- get_db_mysql("readonly_test")
-  on.exit(dbDisconnect(con)) #nolint
-  expect_true("testtable" %in% dbListTables(con)) #nolint
+  on.exit(RMySQL::dbDisconnect(con)) #nolint
+  expect_true("testtable" %in% RMySQL::dbListTables(con)) #nolint
 })
 
 test_that("get_db_mysql test connection lists correct fields", {
   con <- get_db_mysql("readonly_test")
-  on.exit(dbDisconnect(con)) #nolint
-  expect_true(identical(dbListFields(con, "testtable"), #nolint
+  on.exit(RMySQL::dbDisconnect(con)) #nolint
+  expect_true(identical(RMySQL::dbListFields(con, "testtable"), #nolint
                         c("field 1", "field 2")))
 })
