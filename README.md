@@ -3,7 +3,7 @@
 
 
 
-[![Travis-CI Build Status](https://travis-ci.org/UW-GAC/dbR.svg?branch=master)](https://travis-ci.org/UW-GAC/dbR)
+[![Travis-CI Build Status](https://travis-ci.org/UW-GAC/dbR.svg?branch=develop)](https://travis-ci.org/UW-GAC/dbR)
 
 ### dbR
 
