@@ -7,7 +7,9 @@
 
 ### dbR
 
-Here are some utility functions for working with the in-house databases at the University of Washington Genetic Analysis Center (UW GAC).
+**Disclaimer:** This code is very much under *development*. If you use it, it may leave your computer a smoking crater on your desk.
+
+dbR contains some utility functions for working with the in-house databases at the University of Washington Genetic Analysis Center (UW GAC).
 
 ### Installation
 
