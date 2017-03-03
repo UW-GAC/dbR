@@ -11,6 +11,7 @@ test_that("test_dplyr_connect returns an error if the database isn't in the
 })
 
 test_that("dplyr_connect returns a MySQLConnection object", {
+  skip_on_travis()
   con <- dplyr_connect("readonly_test")
 #  on.exit(lapply(RMySQL::dbListConnections(DBI::dbDriver( drv = "MySQL")),
 #                  dbDisconnect))
@@ -19,12 +20,14 @@ test_that("dplyr_connect returns a MySQLConnection object", {
 })
 
 test_that("dplyr_connect test connection can find testtable", {
+  skip_on_travis()
   con <- dplyr_connect ("readonly_test")
   on.exit(rm(con))
   expect_true("testtable" %in% dplyr::src_tbls(con))
 })
 
 test_that("dplyr_connect test connection lists correct fields", {
+  skip_on_travis()
   con <- dplyr_connect("readonly_test")
   on.exit(rm(con))
   expect_true(identical(dplyr::tbl(con, "testtable")$ops$vars,
