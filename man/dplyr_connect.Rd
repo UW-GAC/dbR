@@ -19,7 +19,7 @@ a dplyr sql src object
 Get a dplyr sql src object, the mysql database
 }
 \examples{
-dontrun{
+\dontrun{
 con <- dplyr_connect("testdb")
 con <- dplyr_connect("testdb", config = "~/.custom.cnf")
 

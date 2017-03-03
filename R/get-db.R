@@ -6,7 +6,7 @@
 #' @return A database connection
 #'
 #' @examples
-#' dontrun{
+#' \dontrun{
 #' con <- get_db_mysql("testdb")
 #' con <- get_db_mysql("testdb", config = "~/.custom.cnf")
 #'
@@ -32,7 +32,7 @@ get_db_mysql <- function(dbname, config = "~/.mysql.cnf") { #nolint
 #' @return a dplyr sql src object
 #'
 #' @examples
-#' dontrun{
+#' \dontrun{
 #' con <- dplyr_connect("testdb")
 #' con <- dplyr_connect("testdb", config = "~/.custom.cnf")
 #'
