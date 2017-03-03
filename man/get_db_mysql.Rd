@@ -19,9 +19,11 @@ A database connection
 Get a mysql database connection
 }
 \examples{
+dontrun{
 con <- get_db_mysql("testdb")
 con <- get_db_mysql("testdb", config = "~/.custom.cnf")
 
 dbListFields(con, "testtable")
+}
 
 }

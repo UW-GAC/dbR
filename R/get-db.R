@@ -6,10 +6,12 @@
 #' @return A database connection
 #'
 #' @examples
+#' dontrun{
 #' con <- get_db_mysql("testdb")
 #' con <- get_db_mysql("testdb", config = "~/.custom.cnf")
 #'
 #' dbListFields(con, "testtable")
+#' }
 #'
 #' @export
 
@@ -30,10 +32,12 @@ get_db_mysql <- function(dbname, config = "~/.mysql.cnf") { #nolint
 #' @return a dplyr sql src object
 #'
 #' @examples
+#' dontrun{
 #' con <- dplyr_connect("testdb")
 #' con <- dplyr_connect("testdb", config = "~/.custom.cnf")
 #'
 #' dplyr_table <- tbl(con, "testtable")
+#' }
 #'
 #' @export
 
