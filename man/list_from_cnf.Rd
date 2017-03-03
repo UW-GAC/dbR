@@ -16,6 +16,8 @@ A list of database connections listed in the .cnf file
 List database connections available in a .cnf file
 }
 \examples{
+\\donotrun{
 databases <- list_from_cnf('~/.mysql.cnf')
+}
 
 }
