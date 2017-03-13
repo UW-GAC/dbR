@@ -5,7 +5,7 @@
 \title{Get a mysql database connection}
 \usage{
 get_db_mysql(dbname,
-  config = "/projects/topmed/variant_annotation/.variant.cnf")
+  config = "/projects/topmed/variant_annotation/.variant-server.cnf")
 }
 \arguments{
 \item{dbname}{the database name (should match descriptor in .cnf file)}
