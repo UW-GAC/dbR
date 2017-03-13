@@ -13,6 +13,7 @@
 #' dbListFields(con, "testtable")
 #' }
 #'
+#' @import RMySQL
 #' @export
 
 get_db_mysql <- function(dbname, config = "~/.mysql.cnf") { #nolint
@@ -39,6 +40,7 @@ get_db_mysql <- function(dbname, config = "~/.mysql.cnf") { #nolint
 #' dplyr_table <- tbl(con, "testtable")
 #' }
 #'
+#' @import dplyr
 #' @export
 
 dplyr_connect <- function(dbname, config = "~/.mysql.cnf") { #nolint

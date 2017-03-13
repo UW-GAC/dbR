@@ -3,3 +3,5 @@
 export(dplyr_connect)
 export(get_db_mysql)
 export(list_from_cnf)
+import(RMySQL)
+import(dplyr)
