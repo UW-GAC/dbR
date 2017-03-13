@@ -4,7 +4,8 @@
 \alias{dplyr_connect}
 \title{Get a dplyr sql src object, the mysql database}
 \usage{
-dplyr_connect(dbname, config = "~/.mysql.cnf")
+dplyr_connect(dbname,
+  config = "/projects/topmed/variant_annotation/.variant.cnf")
 }
 \arguments{
 \item{dbname}{the database name (should match descriptor in .cnf file)}

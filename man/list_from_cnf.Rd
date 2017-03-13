@@ -4,7 +4,8 @@
 \alias{list_from_cnf}
 \title{List database connections available in a .cnf file}
 \usage{
-list_from_cnf(path)
+
+  list_from_cnf(path = "/projects/topmed/variant_annotation/.variant-server.cnf")
 }
 \arguments{
 \item{path}{the path to the .cnf file (incluidng the .cnf file name)}
