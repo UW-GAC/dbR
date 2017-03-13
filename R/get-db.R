@@ -16,7 +16,7 @@
 #' @export
 
 get_db_mysql <- function(dbname,
-  config = "/projects/topmed/variant_annotation/.variant.cnf") { #nolint
+  config = "/projects/topmed/variant_annotation/.variant-server.cnf") { #nolint
   if (!dbname %in% list_from_cnf(config)) {
     stop("database not in cnf file")
   }
@@ -43,7 +43,7 @@ get_db_mysql <- function(dbname,
 #' @export
 
 dplyr_connect <- function(dbname,
-  config = "/projects/topmed/variant_annotation/.variant.cnf") { #nolint
+  config = "/projects/topmed/variant_annotation/.variant-server.cnf") { #nolint
   if (!dbname %in% list_from_cnf(config)) {
     stop("database not in cnf file")
   }
