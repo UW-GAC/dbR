@@ -5,11 +5,14 @@
 #' A list of database connections listed in the .cnf file
 #'
 #' @examples
+#' \dontrun{
 #' databases <- list_from_cnf('~/.mysql.cnf')
+#' }
 #'
 #' @export
 
-list_from_cnf <- function(path){
+list_from_cnf <- function(
+  path = "/projects/topmed/variant_annotation/.variant-server.cnf"){ #nolint
 
   if (!file.exists(path)) {
     stop(".cnf file doesn't exist")

@@ -4,7 +4,8 @@
 \alias{get_db_mysql}
 \title{Get a mysql database connection}
 \usage{
-get_db_mysql(dbname, config = "~/.mysql.cnf")
+get_db_mysql(dbname,
+  config = "/projects/topmed/variant_annotation/.variant.cnf")
 }
 \arguments{
 \item{dbname}{the database name (should match descriptor in .cnf file)}
@@ -19,9 +20,11 @@ A database connection
 Get a mysql database connection
 }
 \examples{
+\dontrun{
 con <- get_db_mysql("testdb")
 con <- get_db_mysql("testdb", config = "~/.custom.cnf")
 
 dbListFields(con, "testtable")
+}
 
 }

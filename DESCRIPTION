@@ -1,10 +1,10 @@
 Package: dbR
 Title: Utilities for connecting to internal UW GAC databases
-Version: 0.0.0.9001
+Version: 0.0.0.9002
 Authors@R: person("Ben", "Heavner", email = "bheavner@uw.edu", role = c("aut", "cre"))
 Description: This package contains some some general R tools for  establishing connections to internal databases.
 Depends: 
-License: MIT
+License: MIT + file  LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: testthat,

@@ -6,14 +6,17 @@
 #' @return A database connection
 #'
 #' @examples
+#' \dontrun{
 #' con <- get_db_mysql("testdb")
 #' con <- get_db_mysql("testdb", config = "~/.custom.cnf")
 #'
 #' dbListFields(con, "testtable")
+#' }
 #'
 #' @export
 
-get_db_mysql <- function(dbname, config = "~/.mysql.cnf") { #nolint
+get_db_mysql <- function(dbname,
+  config = "/projects/topmed/variant_annotation/.variant.cnf") { #nolint
   if (!dbname %in% list_from_cnf(config)) {
     stop("database not in cnf file")
   }
@@ -30,14 +33,17 @@ get_db_mysql <- function(dbname, config = "~/.mysql.cnf") { #nolint
 #' @return a dplyr sql src object
 #'
 #' @examples
+#' \dontrun{
 #' con <- dplyr_connect("testdb")
 #' con <- dplyr_connect("testdb", config = "~/.custom.cnf")
 #'
 #' dplyr_table <- tbl(con, "testtable")
+#' }
 #'
 #' @export
 
-dplyr_connect <- function(dbname, config = "~/.mysql.cnf") { #nolint
+dplyr_connect <- function(dbname,
+  config = "/projects/topmed/variant_annotation/.variant.cnf") { #nolint
   if (!dbname %in% list_from_cnf(config)) {
     stop("database not in cnf file")
   }

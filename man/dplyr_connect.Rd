@@ -2,9 +2,10 @@
 % Please edit documentation in R/get-db.R
 \name{dplyr_connect}
 \alias{dplyr_connect}
-\title{Get a dplyr tbl from the mysql database}
+\title{Get a dplyr sql src object, the mysql database}
 \usage{
-dplyr_connect(dbname, config = "~/.mysql.cnf")
+dplyr_connect(dbname,
+  config = "/projects/topmed/variant_annotation/.variant.cnf")
 }
 \arguments{
 \item{dbname}{the database name (should match descriptor in .cnf file)}
@@ -16,12 +17,14 @@ dplyr_connect(dbname, config = "~/.mysql.cnf")
 a dplyr sql src object
 }
 \description{
-Get a dplyr tbl from the mysql database
+Get a dplyr sql src object, the mysql database
 }
 \examples{
+\dontrun{
 con <- dplyr_connect("testdb")
 con <- dplyr_connect("testdb", config = "~/.custom.cnf")
 
 dplyr_table <- tbl(con, "testtable")
+}
 
 }
