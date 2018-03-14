@@ -1,9 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-
-
-[![Travis-CI Build Status](https://travis-ci.org/UW-GAC/dbR.svg?branch=develop)](https://travis-ci.org/UW-GAC/dbR)
+[![Travis-CI Build Status](https://travis-ci.org/UW-GAC/dbR.svg?branch=develop)](https://travis-ci.org/UW-GAC/dbR)[![Coverage Status](https://coveralls.io/repos/github/UW-GAC/wgsadbworkr/badge.svg?branch=master)](https://coveralls.io/github/UW-GAC/wgsadbworkr?branch=master)
 
 ### dbR
 

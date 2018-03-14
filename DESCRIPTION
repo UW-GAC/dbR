@@ -1,15 +1,16 @@
-Package: dbR
-Title: Utilities for connecting to internal UW GAC databases
+Package: wgsadbworkr 
+Title: Utilities for working with UW GAC wgsa database
 Version: 0.0.0.9003
 Authors@R: person("Ben", "Heavner", email = "bheavner@uw.edu", role = c("aut", "cre"))
-Description: This package contains some some general R tools for  establishing connections to internal databases.
+Description: This package contains some R tools for working with the UW GAC's WGSA database.
 Depends: 
 License: MIT + file  LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    covr
 RoxygenNote: 6.0.1
 Imports: RMySQL,
     dplyr
