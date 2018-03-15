@@ -1,4 +1,4 @@
 library(testthat)
-library(dbR) # nolint
+library(wgsadbworkr)
 
-test_check("dbR")
+test_check("wgsadbworkr")
