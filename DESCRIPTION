@@ -8,6 +8,7 @@ License: MIT + file  LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: testthat,
-    lintr
+    lintr,
+    covr
 RoxygenNote: 6.0.1
 Imports: 
