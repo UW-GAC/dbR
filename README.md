@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/UW-GAC/wgsadbR.svg?branch=develop)](https://travis-ci.org/UW-GAC/wgsadbR)[![Coverage Status](https://img.shields.io/codecov/c/github/UW-GAC/wgsadbworkr/master.svg)](https://codecov.io/github/UW-GAC/wgsadbworkr?branch=develop)
+[![Build Status](https://travis-ci.org/UW-GAC/wgsadbworkr.svg?branch=develop)](https://travis-ci.org/UW-GAC/wgsadbworkr)[![Coverage Status](https://img.shields.io/codecov/c/github/UW-GAC/wgsadbworkr/master.svg)](https://codecov.io/github/UW-GAC/wgsadbworkr?branch=develop)
 
 ### wgsadbworkr
 
