@@ -1,6 +1,11 @@
 # package helper utility functions ------------------------------------
 
-#' @noRd
+#' Get an encouraging message
+#'
+#' \code{last()} returns an encouraging message.
+#'
+#' @examples
+#' last()
 #'
 #' @export
 last <- function() {
